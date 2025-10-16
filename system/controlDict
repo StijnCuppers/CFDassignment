@@ -1,0 +1,78 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v13                                   |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     rhoSimpleFoam;
+
+startFrom       startTime;
+startTime       0;
+
+stopAt          endTime;
+endTime         1000;         // Max number of ITERATIONS
+
+deltaT          1;            // Must be 1 for steady-state
+
+writeControl    timeStep;
+writeInterval   100;
+
+purgeWrite      0;
+writeFormat     ascii;
+writePrecision  8;
+runTimeModifiable yes;
+
+// ************************************************************************* //
+
+/*
+
+functions
+{
+    forces
+    {
+        type            forces;
+        libs            ("libforces.so");
+        writeControl    timeStep;
+        writeInterval   1;        
+
+        patches         ("Airfoil"); 
+
+
+        p               p;
+        U               U;
+        rho             rho;
+
+
+        CofR            (0.25 0 0);
+    }
+
+    /*
+    // fieldAverage is not typically used for steady-state, but can be enabled if needed
+    fieldAverage1
+    {
+        type            fieldAverage;
+        libs            ("libfieldFunctionObjects.so");
+        writeControl    timeStep;
+        writeInterval   100; // Average and write at the same time as the main solution
+        timeStart       500; // Start averaging when the solution is more stable
+        fields
+        (
+            U { mean on; prime2Mean off; base time; }
+            p { mean on; prime2Mean off; base time; }
+        );
+    }
+    */
+}
+*/
+// ************************************************************************* //
