@@ -1,0 +1,50 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+// Standard sea-level temperature
+internalField   uniform 239.23;
+
+boundaryField
+{
+    Inlet
+    {
+        type            totalTemperature;
+        T0              uniform 250;
+        gamma           1.4;
+        value           uniform 250;
+    }
+
+    Outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform 239.23;
+        value           $internalField;
+    }
+
+    Airfoil
+    {
+        type            zeroGradient; 
+    }
+
+    Side
+    {
+        type            empty;
+    }
+}
+
+// ************************************************************************* //
