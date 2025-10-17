@@ -16,8 +16,8 @@ FoamFile
 
 dimensions      [0 0 0 1 0 0 0];
 
-// Standard sea-level temperature
-internalField   uniform 239.23;
+
+internalField   uniform 245.48;
 
 boundaryField
 {
@@ -26,13 +26,13 @@ boundaryField
         type            totalTemperature;
         T0              uniform 250;
         gamma           1.4;
-        value           uniform 239.23;
+        value           uniform 245.48;
     }
 
     Outlet
     {
         type            inletOutlet;
-        inletValue      uniform 239.23;
+        inletValue      uniform 245.48;
         value           $internalField;
     }
 
@@ -45,6 +45,7 @@ boundaryField
     {
         type            empty;
     }
+     #includeEtc "caseDicts/setConstraintTypes"
 }
 
 // ************************************************************************* //

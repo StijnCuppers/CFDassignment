@@ -16,7 +16,7 @@ FoamFile
 
 dimensions      [0 0 -1 0 0 0 0];
 
-internalField   uniform 60.21092187;
+internalField   uniform 60.2460600795;
 
 boundaryField
 {
@@ -43,6 +43,8 @@ boundaryField
     {
         type            empty;
     }
+
+     #includeEtc "caseDicts/setConstraintTypes"
 }
 
 // ************************************************************************* //
