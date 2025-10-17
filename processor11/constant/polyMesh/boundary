@@ -1,0 +1,93 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+8
+(
+    Side
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          2752;
+        startFace       2661;
+    }
+    Inlet
+    {
+        type            patch;
+        nFaces          32;
+        startFace       5413;
+    }
+    Airfoil
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          0;
+        startFace       5445;
+    }
+    Outlet
+    {
+        type            patch;
+        nFaces          0;
+        startFace       5445;
+    }
+    procBoundary11to3
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          1;
+        startFace       5445;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        11;
+        neighbProcNo    3;
+    }
+    procBoundary11to4
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          26;
+        startFace       5446;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        11;
+        neighbProcNo    4;
+    }
+    procBoundary11to10
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          58;
+        startFace       5472;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        11;
+        neighbProcNo    10;
+    }
+    procBoundary11to12
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          65;
+        startFace       5530;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        11;
+        neighbProcNo    12;
+    }
+)
+
+// ************************************************************************* //
