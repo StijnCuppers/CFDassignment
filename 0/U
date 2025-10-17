@@ -23,14 +23,14 @@ boundaryField
     Inlet 
     {
       type             fixedValue;
-      value       uniform (94.3 0 0);
+      value            uniform (94.3 0 0);
     }
 
     Outlet
     {
       type              inletOutlet;
-      inletValue       uniform (94.3 0 0);
-      value            $internalField;
+      inletValue        uniform (94.3 0 0);
+      value             $internalField;
     }
 
     Side
