@@ -15,23 +15,38 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     rhoSimpleFoam;
+application     rhoPimpleFoam;
 
 startFrom       startTime;
 startTime       0;
 
 stopAt          endTime;
-endTime         1000;         // Max number of ITERATIONS
+endTime         0.15;
 
-deltaT          1;            // Must be 1 for steady-state
+deltaT          2e-5;
 
-writeControl    timeStep;
-writeInterval   100;
+writeControl    adjustable;
 
-purgeWrite      0;
+writeInterval   0.001;
+
+purgeWrite      10;
+
 writeFormat     ascii;
-writePrecision  8;
-runTimeModifiable yes;
+
+writePrecision   8;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+
+adjustTimeStep  yes;
+
+maxCo           0.5;
 
 // ************************************************************************* //
 
