@@ -35,14 +35,13 @@ runTimeModifiable yes;
 
 // ************************************************************************* //
 
-/*
 
 functions
 {
     forces
     {
         type            forces;
-        libs            ("libforces.so");
+        libs            (forces);
         writeControl    timeStep;
         writeInterval   1;        
 
@@ -57,12 +56,10 @@ functions
         CofR            (0.25 0 0);
     }
 
-    /*
-    // fieldAverage is not typically used for steady-state, but can be enabled if needed
     fieldAverage1
     {
         type            fieldAverage;
-        libs            ("libfieldFunctionObjects.so");
+        libs            (fieldFunctionObjects);
         writeControl    timeStep;
         writeInterval   100; // Average and write at the same time as the main solution
         timeStart       500; // Start averaging when the solution is more stable
@@ -72,7 +69,6 @@ functions
             p { mean on; prime2Mean off; base time; }
         );
     }
-    */
 }
-*/
+
 // ************************************************************************* //
