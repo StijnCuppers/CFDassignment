@@ -22,8 +22,8 @@ boundaryField
 {   
     Inlet 
     {
-      type             fixedValue;
-      value            uniform (94.3 0 0);
+      type             freestreamVelocity;
+      freestreamValue             uniform (94.3 0 0);
     }
 
     Outlet
@@ -42,6 +42,7 @@ boundaryField
     {
         type            noSlip;
     }
+     #includeEtc "caseDicts/setConstraintTypes"
 }
 
 
