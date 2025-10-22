@@ -42,6 +42,11 @@ boundaryField
         inletValue      nonuniform List<scalar> 0();
         value           nonuniform List<scalar> 0();
     }
+    procBoundary10to2
+    {
+        type            processor;
+        value           uniform 60.24606;
+    }
     procBoundary10to3
     {
         type            processor;

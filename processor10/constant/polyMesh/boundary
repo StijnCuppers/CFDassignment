@@ -16,7 +16,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-7
+8
 (
     Side
     {
@@ -44,12 +44,23 @@ FoamFile
         nFaces          0;
         startFace       5454;
     }
+    procBoundary10to2
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          1;
+        startFace       5454;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        10;
+        neighbProcNo    2;
+    }
     procBoundary10to3
     {
         type            processor;
         inGroups        1(processor);
         nFaces          23;
-        startFace       5454;
+        startFace       5455;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        10;
@@ -59,8 +70,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          67;
-        startFace       5477;
+        nFaces          66;
+        startFace       5478;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        10;
