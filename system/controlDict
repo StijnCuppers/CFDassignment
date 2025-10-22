@@ -82,6 +82,45 @@ functions
             p { mean on; prime2Mean off; base time; }
         );
     }
+
+    pressure
+    {
+        type            pressure;
+        libs            (fieldFunctionObjects);
+        writeControl    writeTime;
+        result          Cp;
+        mode            staticCoeff;
+        rho             rhoInf;
+        rhoInf          0.67;
+        U               UInf;
+        UInf            (94.3 0 0);
+        pInf            46970.;
+    }
+
+    wallShearStress
+    {
+        type            wallShearStress;
+        libs            (fieldFunctionObjects);
+        writeControl    writeTime;
+        patches         (Airfoil);
+        format          gnuplot;
+    }
+
+    yPlus
+    {
+        type            yPlus;
+        libs            (fieldFunctionObjects);
+        writeControl    writeTime;
+        patches         (Airfoil);
+        format          gnuplot;
+    }
+
+    cellCentres
+    {
+        type            writeCellCentres;
+        libs            (fieldFunctionObjects);
+        writeControl    writeTime;
+    }
 }
 
 // ************************************************************************* //
