@@ -22,11 +22,11 @@ cdf7e925f5746741c316f5fbcf39ad0dfca90775
     {
         vector
         {
-            pressureForce   ( 21.940714 -35.620242 1.6394452e-15 );
-            viscousForce    ( 21.660127 3.9909857e-05 -2.0509684e-19 );
+            pressureForce   ( 16.322358 -8.0094315 -1.2637507e-15 );
+            viscousForce    ( 21.766706 0.0004455312 3.2157749e-19 );
             internalForce   ( 0 0 0 );
-            pressureMoment  ( 17.810121 10.970357 -11.386196 );
-            viscousMoment   ( -1.9954929e-05 10.830063 0.02591431 );
+            pressureMoment  ( 4.0047157 8.1611791 4.5532276 );
+            viscousMoment   ( -0.0002227656 10.883353 0.0021075281 );
             internalMoment  ( 0 0 0 );
         }
     }
