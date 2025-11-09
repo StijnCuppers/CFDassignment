@@ -16,7 +16,7 @@ FoamFile
 
 dimensions      [1 -1 -1 0 0 0 0]; // Corresponds to kg/(m.s)
 
-internalField   uniform 0;
+internalField   uniform 0.22140427078;
 
 boundaryField
 {
@@ -35,7 +35,7 @@ boundaryField
 
     Airfoil
     {
-        type            compressible::alphatJayatillekeWallFunction;
+        type            compressible::alphatWallFunction;
         value           $internalField;
     }
 
@@ -43,6 +43,8 @@ boundaryField
     {
         type            empty;
     }
+
+     #includeEtc "caseDicts/setConstraintTypes"
 }
 
 // ************************************************************************* //
