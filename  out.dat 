@@ -1,0 +1,43 @@
+Using: OpenFOAM-2506 (2506) - visit www.openfoam.com
+Build: _615aae61-20250627
+
+Invalid option: -parallel 
+
+See 'rhoPimpleFoam -help' for usage
+ or 'rhoPimpleFoam -help-full' for extended usage
+
+Using: OpenFOAM-2506 (2506) - visit www.openfoam.com
+Build: _615aae61-20250627
+
+Invalid option: -parallel 
+
+See 'rhoPimpleFoam -help' for usage
+ or 'rhoPimpleFoam -help-full' for extended usage
+
+Using: OpenFOAM-2506 (2506) - visit www.openfoam.com
+Build: _615aae61-20250627
+
+Invalid option: -parallel 
+
+See 'rhoPimpleFoam -help' for usage
+ or 'rhoPimpleFoam -help-full' for extended usage
+
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+Using: OpenFOAM-2506 (2506) - visit www.openfoam.com
+Build: _615aae61-20250627
+
+Invalid option: -parallel 
+
+See 'rhoPimpleFoam -help' for usage
+ or 'rhoPimpleFoam -help-full' for extended usage
+
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[39645,1],3]
+  Exit code:    1
+--------------------------------------------------------------------------

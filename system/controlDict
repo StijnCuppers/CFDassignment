@@ -15,59 +15,141 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     rhoSimpleFoam;
+application     rhoPimpleFoam;
 
 startFrom       startTime;
 startTime       0;
 
 stopAt          endTime;
-endTime         1000;         // Max number of ITERATIONS
+endTime         3;
 
-deltaT          1;            // Must be 1 for steady-state
+deltaT          2e-5;
 
-writeControl    timeStep;
-writeInterval   100;
+writeControl    adjustable;
 
-purgeWrite      0;
+writeInterval   0.05;
+
 writeFormat     ascii;
-writePrecision  8;
-runTimeModifiable yes;
+
+writePrecision   8;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+
+adjustTimeStep  yes;
+
+maxCo           0.5;
 
 // ************************************************************************* //
 
 
 functions
 {
+    Co1
+    {
+    	type		CourantNo;
+    	libs		(fieldFunctionObjects);
+    	writeControl	adjustableRunTime;
+    	writeInterval	0.1;
+    }
+    
     forces
     {
-        type            forces;
+        type            forceCoeffs;
         libs            (forces);
-        writeControl    timeStep;
-        writeInterval   1;        
+        writeControl	adjustableRunTime;
+    	writeInterval	0.1;
 
-        patches         ("Airfoil"); 
-
-
+        patches
+        (
+           Airfoil
+        );
         p               p;
         U               U;
-        rho             rho;
+        rho             rhoInf;
+        rhoInf      1;
 
-
-        CofR            (0.25 0 0);
+        CofR        (0.25 0 0);
+        liftDir     (0 1 0); //(-0.258819045 0.965925826 0);
+        dragDir      (1 0 0); //(0.965925826   0.258819045 0);
+        pitchAxis   (0 0 1);
+        magUInf     94.23719186;
+        lRef        1.5;
+        Aref        1.;
     }
 
-    fieldAverage1
+    
+
+    sample
     {
-        type            fieldAverage;
+        type            sets;
+        libs            (sampling);
+        writeControl	adjustableRunTime;
+    	writeInterval	0.1;
+        interpolationScheme cellPoint;
+        setFormat raw;
+    sets
+       (
+
+   top
+    {
+        type    cloud;
+        axis    x;
+        points   (
+        #include "suction_side.dat"
+         );
+    interpolate true ;
+    }
+    bottom
+    {
+        type    cloud;
+        axis    x;
+        points   (
+        #include "pressure_side.dat"
+         );
+    interpolate true ;
+    }
+);
+fields          ( p pMean);
+}
+
+    wallShearStress
+    {
+        type            wallShearStress;
         libs            (fieldFunctionObjects);
-        writeControl    timeStep;
-        writeInterval   100; // Average and write at the same time as the main solution
-        timeStart       500; // Start averaging when the solution is more stable
-        fields
-        (
-            U { mean on; prime2Mean off; base time; }
-            p { mean on; prime2Mean off; base time; }
-        );
+        writeControl	adjustableRunTime;
+    	writeInterval	0.1;
+        patches         (Airfoil);
+        format          gnuplot;
+    }
+
+    yPlus
+    {
+        type            yPlus;
+        libs            (fieldFunctionObjects);
+        writeControl	adjustableRunTime;
+        writeToFile     true;
+    	writeInterval	0.1;
+        writePrecision  8;
+        patches         (Airfoil);
+        enabled         true;
+        log             true;
+        executeControl  adjustableRunTime;
+    	executeInterval	0.1;
+    }
+
+    cellCentres
+    {
+        type            writeCellCentres;
+        libs            (fieldFunctionObjects);
+        writeControl	adjustableRunTime;
+    	writeInterval	0.1;
     }
 }
 
