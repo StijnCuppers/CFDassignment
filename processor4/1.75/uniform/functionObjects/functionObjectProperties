@@ -20,15 +20,86 @@ cdf7e925f5746741c316f5fbcf39ad0dfca90775
 {
     forces
     {
-        vector
+        scalar
         {
-            pressureForce   ( 13.148948 -3.1744361 -1.2628264e-15 );
-            viscousForce    ( 21.723513 -0.015178794 3.2312195e-19 );
-            internalForce   ( 0 0 0 );
-            pressureMoment  ( 1.5872181 6.5744741 -2.6591144 );
-            viscousMoment   ( 0.0075893968 10.861756 0.0017581838 );
-            internalMoment  ( 0 0 0 );
+            Cd              0.008435490599915073;
+            CdPressure      0.003542527534009365;
+            CdViscous       0.004892963065905708;
+            CdInternal      0;
+            Cd(f)           0.004748990248086499;
+            Cd(f)Pressure   0.002301965627511358;
+            Cd(f)Viscous    0.00244702462057514;
+            Cd(f)Internal   0;
+            Cd(r)           0.003686500351828575;
+            Cd(r)Pressure   0.001240561906498006;
+            Cd(r)Viscous    0.002445938445330568;
+            Cd(r)Internal   0;
+            Cl              -0.001593734844385248;
+            ClPressure      -0.001592105581518389;
+            ClViscous       -1.629262866858578e-06;
+            ClInternal      0;
+            Cl(f)           -0.0006530174607990677;
+            Cl(f)Pressure   -0.0006532909495214304;
+            Cl(f)Viscous    2.734887223627198e-07;
+            Cl(f)Internal   0;
+            Cl(r)           -0.0009407173835861798;
+            Cl(r)Pressure   -0.0009388146319969585;
+            Cl(r)Viscous    -1.902751589221298e-06;
+            Cl(r)Internal   0;
+            CmPitch         0.000143849961393556;
+            CmPitchPressure 0.000142761841237764;
+            CmPitchViscous  1.088120155792009e-06;
+            CmPitchInternal 0;
+            CmRoll          0.000531244948128962;
+            CmRollPressure  0.0005307018605066759;
+            CmRollViscous   5.430876222861905e-07;
+            CmRollInternal  0;
+            CmYaw           0.002811830199971588;
+            CmYawPressure   0.001180842511336352;
+            CmYawViscous    0.001630987688635236;
+            CmYawInternal   0;
+            Cs              2.844562450577874e-19;
+            CsPressure      2.845285361282506e-19;
+            CsViscous       -7.229107046318419e-23;
+            CsInternal      0;
+            Cs(f)           0.002811830199971588;
+            Cs(f)Pressure   0.001180842511336353;
+            Cs(f)Viscous    0.001630987688635236;
+            Cs(f)Internal   0;
+            Cs(r)           -0.002811830199971588;
+            Cs(r)Pressure   -0.001180842511336352;
+            Cs(r)Viscous    -0.001630987688635236;
+            Cs(r)Internal   0;
         }
+    }
+    sample
+    {
+        scalar
+        {
+            average(top,p)  46789.10518984099;
+            min(top,p)      45684.86771603452;
+            max(top,p)      49452.03891371688;
+            average(bottom,p) 46728.87307432319;
+            min(bottom,p)   45736.11157766342;
+            max(bottom,p)   49089.5494656208;
+            average(p)      46759.35197615147;
+            min(p)          45684.86771603452;
+            max(p)          49452.03891371688;
+        }
+        label
+        {
+            size(top,p)     42;
+            size(bottom,p)  41;
+            size(p)         83;
+        }
+    }
+}
+
+sample
+{
+    p
+    {
+        file            "<case>/postProcessing/sample/1.7/bottom_p.xy";
     }
 }
 
