@@ -16,20 +16,20 @@ FoamFile
 
 dimensions      [0 1 -1 0 0 0 0];
 
-internalField   uniform (94.3 0 0);
+internalField   uniform (94.24 0 0); //(91.03 24.39 0);
 
 boundaryField
 {   
     Inlet 
     {
       type             freestreamVelocity;
-      freestreamValue             uniform (94.3 0 0);
+      freestreamValue             uniform (94.24 0 0);
     }
 
     Outlet
     {
       type              inletOutlet;
-      inletValue        uniform (94.3 0 0);
+      inletValue        uniform (94.24 0 0);
       value             $internalField;
     }
 
