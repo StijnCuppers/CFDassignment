@@ -1,0 +1,8 @@
+Using: OpenFOAM-2506 (2506) - visit www.openfoam.com
+Build: _615aae61-20250627
+
+Invalid option: -all
+
+See 'checkMesh -help' for usage
+ or 'checkMesh -help-full' for extended usage
+
