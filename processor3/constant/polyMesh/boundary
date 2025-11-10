@@ -22,34 +22,34 @@ FoamFile
     {
         type            empty;
         inGroups        1(empty);
-        nFaces          61208;
-        startFace       60703;
+        nFaces          140960;
+        startFace       140249;
     }
     Inlet
     {
         type            patch;
-        nFaces          56;
-        startFace       121911;
+        nFaces          92;
+        startFace       281209;
     }
     Airfoil
     {
         type            wall;
         inGroups        1(wall);
         nFaces          0;
-        startFace       121967;
+        startFace       281301;
     }
     Outlet
     {
         type            patch;
         nFaces          0;
-        startFace       121967;
+        startFace       281301;
     }
     procBoundary3to2
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          410;
-        startFace       121967;
+        nFaces          519;
+        startFace       281301;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        3;
@@ -59,8 +59,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          443;
-        startFace       122377;
+        nFaces          598;
+        startFace       281820;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        3;
@@ -70,8 +70,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          95;
-        startFace       122820;
+        nFaces          192;
+        startFace       282418;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        3;
@@ -81,8 +81,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          6;
-        startFace       122915;
+        nFaces          21;
+        startFace       282610;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        3;
