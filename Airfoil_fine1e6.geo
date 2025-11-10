@@ -1,10 +1,14 @@
 
 x1 = -3;
-x2 = 4.5;
+x2 = 2.5;
+x2b = 1;
 x3 = 9.5;
 x4 = 50;
 x5 = 9;
 y1 = 11;
+y2 = 12.071719677;
+y3 = 14.34936491;
+y4 = 25.2013072;
 
 c = 400;
 f_vert = 1;
@@ -19,16 +23,17 @@ n_2 = c*f_2;
 n_3 = c*f_3;
 n_vert = c*f_vert;
 
-r_inlet =1;
+r_inlet =0.1;
 r_LE = 1;
 r_prof_top = 0.3;
 r_prof_bot = 0.3;
 r_vert = 1.02;
-r_1 = 12;
-r_2 = 20;
-r_3 = 1.003;
-r_4 = 1.02;
-r_wake = 0.04;
+r_vertb = 1.018;
+r_1 = 5;
+r_2 = 0.998;
+r_3 = 1.007;
+r_4 = 1.001;
+r_wake = 1.009;
 
 Point(1) = {1.5, 0.0, 0, 0.05};
 Point(2) = {1.4976885, 0.000336, 0, 0.05};
@@ -119,13 +124,13 @@ Point(83) = {x1, -y1, 0, 1.0};
 //+
 Circle(2) = {82, 41, 83};
 //+
-Point(84) = {x2, y1, 0, 1.0};
+Point(84) = {x2b, y2, 0, 1.0};
 //+
 Point(85) = {x2, -y1, 0, 1.0};
 
 
 //+
-Point(86) = {x3, y1, 0, 1.0};
+Point(86) = {x3, y3, 0, 1.0};
 //+
 Point(87) = {x3, -y1, 0, 1.0};
 //+
@@ -134,7 +139,7 @@ Point(88) = {x5, 0, 0, 1.0};
 
 
 //+
-Point(89) = {x4, y1, 0, 1.0};
+Point(89) = {x4, y4, 0, 1.0};
 //+
 Point(90) = {x4, -y1, 0, 1.0};
 //+
@@ -186,8 +191,10 @@ Transfinite Curve {2} = n_inlet Using Bump r_inlet;
 Transfinite Curve {19} = n_inlet Using Bump r_LE;
 
 //+
-Transfinite Curve {3, 5, 10, 11, 6, 4} = n_vert Using Progression r_vert;
+Transfinite Curve {3, 5, 11, 6, 4} = n_vert Using Progression r_vert;
 //+
+Transfinite Curve {10} = n_vert Using Progression r_vertb;
+
 Transfinite Curve {17,18} = n_vert Using Progression 1;
 //+
 Transfinite Curve {7, 8} = n_1 Using Bump r_1;
@@ -198,9 +205,9 @@ Transfinite Curve {21} = n_1 Using Bump r_prof_bot;
 
 
 //+
-Transfinite Curve {12, 13} = n_2 Using Bump r_2;
+Transfinite Curve {12, 13} = n_2 Using Progression r_2;
 //+
-Transfinite Curve {9} = n_2 Using Bump r_wake;
+Transfinite Curve {9} = n_2 Using Progression r_wake;
 //+
 Transfinite Curve {15, 16} = n_3 Using Progression r_3;
 //+

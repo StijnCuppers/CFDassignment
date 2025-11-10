@@ -7,7 +7,6 @@
       <DataSet name='Inlet' file='CFDassignment_0/boundary/Inlet.vtp' />
       <DataSet name='Airfoil' file='CFDassignment_0/boundary/Airfoil.vtp' />
       <DataSet name='Outlet' file='CFDassignment_0/boundary/Outlet.vtp' />
-      <DataSet name='NonOrtho' file='face-set/nonOrthoFaces/nonOrthoFaces_0.vtp' />
     </Block>
   </vtkMultiBlockDataSet>
   <FieldData>

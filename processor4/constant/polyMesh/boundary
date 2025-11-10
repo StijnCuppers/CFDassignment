@@ -22,34 +22,34 @@ FoamFile
     {
         type            empty;
         inGroups        1(empty);
-        nFaces          2750;
-        startFace       2660;
+        nFaces          61208;
+        startFace       60675;
     }
     Inlet
     {
         type            patch;
-        nFaces          32;
-        startFace       5410;
+        nFaces          227;
+        startFace       121883;
     }
     Airfoil
     {
         type            wall;
         inGroups        1(wall);
         nFaces          0;
-        startFace       5442;
+        startFace       122110;
     }
     Outlet
     {
         type            patch;
         nFaces          0;
-        startFace       5442;
+        startFace       122110;
     }
     procBoundary4to3
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          57;
-        startFace       5442;
+        nFaces          443;
+        startFace       122110;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        4;
@@ -59,8 +59,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          64;
-        startFace       5499;
+        nFaces          303;
+        startFace       122553;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        4;
@@ -70,8 +70,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          26;
-        startFace       5563;
+        nFaces          83;
+        startFace       122856;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        4;
@@ -81,8 +81,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          1;
-        startFace       5589;
+        nFaces          10;
+        startFace       122939;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        4;

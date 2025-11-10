@@ -53,11 +53,6 @@ boundaryField
         type            processor;
         value           uniform 12.004862;
     }
-    procBoundary1to8
-    {
-        type            processor;
-        value           uniform 12.004862;
-    }
 }
 
 

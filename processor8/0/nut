@@ -41,11 +41,6 @@ boundaryField
         type            calculated;
         value           nonuniform List<scalar> 0();
     }
-    procBoundary8to1
-    {
-        type            processor;
-        value           uniform 0.19926384;
-    }
     procBoundary8to7
     {
         type            processor;

@@ -22,34 +22,34 @@ FoamFile
     {
         type            empty;
         inGroups        1(empty);
-        nFaces          2752;
-        startFace       2654;
+        nFaces          61210;
+        startFace       60705;
     }
     Inlet
     {
         type            patch;
-        nFaces          48;
-        startFace       5406;
+        nFaces          57;
+        startFace       121915;
     }
     Airfoil
     {
         type            wall;
         inGroups        1(wall);
         nFaces          0;
-        startFace       5454;
+        startFace       121972;
     }
     Outlet
     {
         type            patch;
         nFaces          0;
-        startFace       5454;
+        startFace       121972;
     }
     procBoundary10to2
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          1;
-        startFace       5454;
+        nFaces          2;
+        startFace       121972;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        10;
@@ -59,8 +59,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          23;
-        startFace       5455;
+        nFaces          95;
+        startFace       121974;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        10;
@@ -70,8 +70,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          66;
-        startFace       5478;
+        nFaces          411;
+        startFace       122069;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        10;
@@ -81,8 +81,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          58;
-        startFace       5544;
+        nFaces          445;
+        startFace       122480;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        10;

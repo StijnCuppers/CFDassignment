@@ -34,7 +34,7 @@ boundaryField
     Airfoil
     {
         type            compressible::alphatWallFunction;
-        value           nonuniform List<scalar> 0();
+        value           uniform 0.22140427;
     }
     Outlet
     {

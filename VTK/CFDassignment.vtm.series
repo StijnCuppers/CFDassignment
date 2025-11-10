@@ -1,6 +1,21 @@
 {
   "file-series-version" : "1.0",
   "files" : [
-    { "name" : "CFDassignment_0.vtm", "time" : 0 }
+    { "name" : "CFDassignment_0.vtm", "time" : 0 },
+    { "name" : "CFDassignment_134.vtm", "time" : 0.001 },
+    { "name" : "CFDassignment_258.vtm", "time" : 0.002 },
+    { "name" : "CFDassignment_385.vtm", "time" : 0.003 },
+    { "name" : "CFDassignment_514.vtm", "time" : 0.004 },
+    { "name" : "CFDassignment_645.vtm", "time" : 0.005 },
+    { "name" : "CFDassignment_777.vtm", "time" : 0.006 },
+    { "name" : "CFDassignment_911.vtm", "time" : 0.007 },
+    { "name" : "CFDassignment_1044.vtm", "time" : 0.008 },
+    { "name" : "CFDassignment_1177.vtm", "time" : 0.009 },
+    { "name" : "CFDassignment_1309.vtm", "time" : 0.01 },
+    { "name" : "CFDassignment_1441.vtm", "time" : 0.011 },
+    { "name" : "CFDassignment_1573.vtm", "time" : 0.012 },
+    { "name" : "CFDassignment_1705.vtm", "time" : 0.013 },
+    { "name" : "CFDassignment_1837.vtm", "time" : 0.014 },
+    { "name" : "CFDassignment_1969.vtm", "time" : 0.015 }
   ]
 }

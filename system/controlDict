@@ -18,16 +18,17 @@ FoamFile
 application     rhoPimpleFoam;
 
 startFrom       startTime;
-startTime       0;
+startTime       0.;
 
 stopAt          endTime;
-endTime         3;
+endTime         0.05; //0.015; //3;
 
 deltaT          2e-5;
 
 writeControl    adjustable;
 
-writeInterval   0.05;
+writeintvaral    0.001;
+writeInterval   $writeintvaral;
 
 writeFormat     ascii;
 
@@ -56,7 +57,7 @@ functions
     	type		CourantNo;
     	libs		(fieldFunctionObjects);
     	writeControl	adjustableRunTime;
-    	writeInterval	0.1;
+    	writeInterval	$writeintvaral;
     }
     
     forces
@@ -64,7 +65,7 @@ functions
         type            forceCoeffs;
         libs            (forces);
         writeControl	adjustableRunTime;
-    	writeInterval	0.1;
+    	writeInterval	$writeintvaral;
 
         patches
         (
@@ -76,8 +77,8 @@ functions
         rhoInf      1;
 
         CofR        (0.25 0 0);
-        liftDir     (0 1 0); //(-0.258819045 0.965925826 0);
-        dragDir      (1 0 0); //(0.965925826   0.258819045 0);
+        liftDir     (-0.258819045 0.965925826 0); //(0 1 0); //
+        dragDir     (0.965925826   0.258819045 0);  // (1 0 0); //
         pitchAxis   (0 0 1);
         magUInf     94.23719186;
         lRef        1.5;
@@ -91,7 +92,7 @@ functions
         type            sets;
         libs            (sampling);
         writeControl	adjustableRunTime;
-    	writeInterval	0.1;
+    	writeInterval   $writeintvaral;
         interpolationScheme cellPoint;
         setFormat raw;
     sets
@@ -124,7 +125,7 @@ fields          ( p pMean);
         type            wallShearStress;
         libs            (fieldFunctionObjects);
         writeControl	adjustableRunTime;
-    	writeInterval	0.1;
+    	writeInterval	$writeintvaral;
         patches         (Airfoil);
         format          gnuplot;
     }
@@ -135,7 +136,7 @@ fields          ( p pMean);
         libs            (fieldFunctionObjects);
         writeControl	adjustableRunTime;
         writeToFile     true;
-    	writeInterval	0.1;
+    	writeInterval	$writeintvaral;
         writePrecision  8;
         patches         (Airfoil);
         enabled         true;
@@ -149,7 +150,7 @@ fields          ( p pMean);
         type            writeCellCentres;
         libs            (fieldFunctionObjects);
         writeControl	adjustableRunTime;
-    	writeInterval	0.1;
+    	writeInterval	$writeintvaral;
     }
 
     MachNo
@@ -157,7 +158,7 @@ fields          ( p pMean);
         type            MachNo;
         libs            (fieldFunctionObjects);
         writeControl	adjustableRunTime;
-    	writeInterval	0.1;
+    	writeInterval	$writeintvaral;
     }
 }
 

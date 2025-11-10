@@ -16,40 +16,40 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-7
+8
 (
     Side
     {
         type            empty;
         inGroups        1(empty);
-        nFaces          2750;
-        startFace       2660;
+        nFaces          61208;
+        startFace       60766;
     }
     Inlet
     {
         type            patch;
-        nFaces          25;
-        startFace       5410;
+        nFaces          133;
+        startFace       121974;
     }
     Airfoil
     {
         type            wall;
         inGroups        1(wall);
         nFaces          0;
-        startFace       5435;
+        startFace       122107;
     }
     Outlet
     {
         type            patch;
         nFaces          0;
-        startFace       5435;
+        startFace       122107;
     }
     procBoundary5to4
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          64;
-        startFace       5435;
+        nFaces          303;
+        startFace       122107;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        5;
@@ -59,8 +59,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          61;
-        startFace       5499;
+        nFaces          357;
+        startFace       122410;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        5;
@@ -70,12 +70,23 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          30;
-        startFace       5560;
+        nFaces          90;
+        startFace       122767;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        5;
         neighbProcNo    12;
+    }
+    procBoundary5to13
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          1;
+        startFace       122857;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        5;
+        neighbProcNo    13;
     }
 )
 

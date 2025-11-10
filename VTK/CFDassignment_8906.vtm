@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<!-- time='0.25' -->
+<VTKFile type='vtkMultiBlockDataSet' version='1.0' byte_order='LittleEndian' header_type='UInt64'>
+  <vtkMultiBlockDataSet>
+    <DataSet name='internal' file='CFDassignment_8906/internal.vtu' />
+    <Block name='boundary'>
+      <DataSet name='Inlet' file='CFDassignment_8906/boundary/Inlet.vtp' />
+      <DataSet name='Airfoil' file='CFDassignment_8906/boundary/Airfoil.vtp' />
+      <DataSet name='Outlet' file='CFDassignment_8906/boundary/Outlet.vtp' />
+    </Block>
+  </vtkMultiBlockDataSet>
+  <FieldData>
+    <DataArray type='Float32' Name='TimeValue' NumberOfTuples='1' format='ascii'>
+0.25
+    </DataArray>
+  </FieldData>
+</VTKFile>
