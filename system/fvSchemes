@@ -34,7 +34,7 @@ divSchemes
 {
     default         none;
 
-    div(phi,U)      Gauss vanLeer; //Gauss linearUpwind limited;
+    div(phi,U)      Gauss limitedLinearV 1; //Gauss vanLeer; //Gauss linearUpwind limited;
 
     energy          Gauss vanLeer; //Gauss linearUpwind limited;
     div(phi,e)      $energy;

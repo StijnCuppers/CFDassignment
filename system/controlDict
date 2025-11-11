@@ -27,7 +27,7 @@ deltaT          2e-5;
 
 writeControl    adjustable;
 
-writeintvaral    1e-5;
+writeintvaral    5e-4;
 writeInterval   $writeintvaral;
 
 writeFormat     ascii;
