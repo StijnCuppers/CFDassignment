@@ -22,34 +22,34 @@ FoamFile
     {
         type            empty;
         inGroups        1(empty);
-        nFaces          61210;
-        startFace       60678;
+        nFaces          2752;
+        startFace       2661;
     }
     Inlet
     {
         type            patch;
-        nFaces          227;
-        startFace       121888;
+        nFaces          32;
+        startFace       5413;
     }
     Airfoil
     {
         type            wall;
         inGroups        1(wall);
         nFaces          0;
-        startFace       122115;
+        startFace       5445;
     }
     Outlet
     {
         type            patch;
         nFaces          0;
-        startFace       122115;
+        startFace       5445;
     }
     procBoundary11to3
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          6;
-        startFace       122115;
+        nFaces          1;
+        startFace       5445;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        11;
@@ -59,8 +59,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          83;
-        startFace       122121;
+        nFaces          26;
+        startFace       5446;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        11;
@@ -70,8 +70,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          445;
-        startFace       122204;
+        nFaces          58;
+        startFace       5472;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        11;
@@ -81,8 +81,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          303;
-        startFace       122649;
+        nFaces          65;
+        startFace       5530;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        11;

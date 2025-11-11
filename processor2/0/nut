@@ -34,7 +34,7 @@ boundaryField
     Airfoil
     {
         type            nutkWallFunction;
-        value           uniform 0.19926384;
+        value           nonuniform List<scalar> 0();
     }
     Outlet
     {

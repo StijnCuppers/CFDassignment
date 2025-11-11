@@ -34,7 +34,7 @@ boundaryField
     Airfoil
     {
         type            omegaWallFunction;
-        value           uniform 60.24606;
+        value           nonuniform List<scalar> 0();
     }
     Outlet
     {

@@ -16,40 +16,40 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-8
+7
 (
     Side
     {
         type            empty;
         inGroups        1(empty);
-        nFaces          61208;
-        startFace       60762;
+        nFaces          2750;
+        startFace       2661;
     }
     Inlet
     {
         type            patch;
-        nFaces          36;
-        startFace       121970;
+        nFaces          9;
+        startFace       5411;
     }
     Airfoil
     {
         type            wall;
         inGroups        1(wall);
-        nFaces          144;
-        startFace       122006;
+        nFaces          33;
+        startFace       5420;
     }
     Outlet
     {
         type            patch;
         nFaces          0;
-        startFace       122150;
+        startFace       5453;
     }
     procBoundary1to0
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          392;
-        startFace       122150;
+        nFaces          53;
+        startFace       5453;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        1;
@@ -59,30 +59,19 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          310;
-        startFace       122542;
+        nFaces          75;
+        startFace       5506;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        1;
         neighbProcNo    2;
     }
-    procBoundary1to7
-    {
-        type            processor;
-        inGroups        1(processor);
-        nFaces          3;
-        startFace       122852;
-        matchTolerance  0.0001;
-        transform       unknown;
-        myProcNo        1;
-        neighbProcNo    7;
-    }
     procBoundary1to8
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          7;
-        startFace       122855;
+        nFaces          8;
+        startFace       5581;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        1;

@@ -42,11 +42,6 @@ boundaryField
         inletValue      uniform 60.24606;
         value           uniform 60.24606;
     }
-    procBoundary13to5
-    {
-        type            processor;
-        value           uniform 60.24606;
-    }
     procBoundary13to6
     {
         type            processor;

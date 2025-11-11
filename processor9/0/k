@@ -35,7 +35,7 @@ boundaryField
     Airfoil
     {
         type            kqRWallFunction;
-        value           uniform 12.004862;
+        value           nonuniform List<scalar> 0();
     }
     Outlet
     {

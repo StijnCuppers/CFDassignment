@@ -16,51 +16,40 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-7
+6
 (
     Side
     {
         type            empty;
         inGroups        1(empty);
-        nFaces          61214;
-        startFace       60793;
+        nFaces          2752;
+        startFace       2670;
     }
     Inlet
     {
         type            patch;
-        nFaces          64;
-        startFace       122007;
+        nFaces          21;
+        startFace       5422;
     }
     Airfoil
     {
         type            wall;
         inGroups        1(wall);
         nFaces          0;
-        startFace       122071;
+        startFace       5443;
     }
     Outlet
     {
         type            patch;
-        nFaces          298;
-        startFace       122071;
-    }
-    procBoundary13to5
-    {
-        type            processor;
-        inGroups        1(processor);
-        nFaces          1;
-        startFace       122369;
-        matchTolerance  0.0001;
-        transform       unknown;
-        myProcNo        13;
-        neighbProcNo    5;
+        nFaces          49;
+        startFace       5443;
     }
     procBoundary13to6
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          123;
-        startFace       122370;
+        nFaces          34;
+        startFace       5492;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        13;
@@ -70,8 +59,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          356;
-        startFace       122493;
+        nFaces          60;
+        startFace       5526;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        13;
