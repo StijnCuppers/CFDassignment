@@ -23,6 +23,7 @@ ddtSchemes
 gradSchemes
 {
     default         Gauss linear;
+    grad(R)         leastSquares;
 
     // limited         cellLimited Gauss linear 1;
     // grad(U)         $limited;
@@ -33,6 +34,8 @@ gradSchemes
 divSchemes
 {
     default         none;
+    div(phi,R)      bounded Gauss limitedLinear 1;   // bounded 2nd-order, stable
+    div(R)          Gauss linear;                    // other divergence uses
 
     div(phi,U)      Gauss limitedLinearV 1; //Gauss vanLeer; //Gauss linearUpwind limited;
 
@@ -49,11 +52,13 @@ divSchemes
     div((phi|interpolate(rho)),p) Gauss vanLeer; //Gauss upwind;
 
     div(((rho*nuEff)*dev2(T(grad(U)))))    Gauss linear;
+    div(((nuEff*dev2(T(grad(U))))) Gauss linear;
 }
 
 laplacianSchemes
 {
     default         Gauss linear corrected;
+    laplacian(nuEff, R) Gauss linear corrected; // if R has diffusive term with nuEff
 }
 
 interpolationSchemes
