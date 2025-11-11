@@ -7,64 +7,64 @@
 BAAAAAAAAAAAAAAA
       </DataArray>
     </FieldData>
-    <Piece NumberOfPoints='4' NumberOfPolys='1'>
+    <Piece NumberOfPoints='0' NumberOfPolys='0'>
       <Points>
         <DataArray type='Float32' Name='Points' NumberOfComponents='3' format='binary'>
-MAAAAAAAAABQMuI+W1K4PQAAAABNvOo+RlC4PQAAAABNvOo+RlC4PQAAgD9QMuI+W1K4PQAAgD8=
+AAAAAAAAAAA=
         </DataArray>
       </Points>
       <Polys>
         <DataArray type='Int32' Name='connectivity' format='binary'>
-EAAAAAAAAAAAAAAAAQAAAAIAAAADAAAA
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Int32' Name='offsets' format='binary'>
-BAAAAAAAAAAEAAAA
+AAAAAAAAAAA=
         </DataArray>
       </Polys>
       <CellData>
         <DataArray type='Float32' Name='T' format='binary'>
-BAAAAAAAAADhenVD
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Float32' Name='alphat' format='binary'>
-BAAAAAAAAADNt2I+
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Float32' Name='k' format='binary'>
-BAAAAAAAAADqE0BB
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Float32' Name='nut' format='binary'>
-BAAAAAAAAADSC0w+
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Float32' Name='omega' format='binary'>
-BAAAAAAAAAD3+3BC
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Float32' Name='p' format='binary'>
-BAAAAAAAAAAAejdH
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Float32' Name='U' NumberOfComponents='3' format='binary'>
-DAAAAAAAAAAAAAAAAAAAAAAAAAA=
+AAAAAAAAAAA=
         </DataArray>
       </CellData>
       <PointData>
         <DataArray type='Float32' Name='T' format='binary'>
-EAAAAAAAAADhenVD4Xp1Q+F6dUPhenVD
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Float32' Name='alphat' format='binary'>
-EAAAAAAAAADNt2I+zbdiPs23Yj7Nt2I+
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Float32' Name='k' format='binary'>
-EAAAAAAAAADqE0BB6hNAQeoTQEHqE0BB
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Float32' Name='nut' format='binary'>
-EAAAAAAAAADSC0w+0gtMPtILTD7SC0w+
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Float32' Name='omega' format='binary'>
-EAAAAAAAAAD3+3BC9/twQvf7cEL3+3BC
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Float32' Name='p' format='binary'>
-EAAAAAAAAAAAejdHAHo3RwB6N0cAejdH
+AAAAAAAAAAA=
         </DataArray>
         <DataArray type='Float32' Name='U' NumberOfComponents='3' format='binary'>
-MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+AAAAAAAAAAA=
         </DataArray>
       </PointData>
     </Piece>
