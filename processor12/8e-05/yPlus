@@ -1,0 +1,139 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       volScalarField;
+    location    "8e-05";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    Side
+    {
+        type            empty;
+    }
+    Inlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    Airfoil
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+68
+(
+4.1335006
+2.4918553
+2.3078305
+2.5102979
+2.6342919
+2.8082399
+2.8308718
+2.8374006
+2.8287387
+2.8163048
+2.8463503
+2.8863745
+2.8898107
+2.9091343
+2.922937
+2.9361048
+2.9287124
+2.9316568
+2.9219871
+2.9191544
+2.9147448
+2.9175943
+2.913855
+2.9181539
+2.9053499
+2.8958339
+2.899328
+2.9037501
+2.9013014
+2.9024303
+2.9080387
+2.9063046
+2.9083469
+2.9091158
+2.9024644
+2.9020268
+2.897279
+2.8882905
+2.8845267
+2.8898934
+2.88542
+2.88173
+2.8824736
+2.8812034
+2.8809987
+2.8699215
+2.8520182
+2.8432303
+2.8350705
+2.8289079
+2.824904
+2.8545006
+2.8672604
+2.8684659
+2.8724221
+2.857293
+2.8492061
+2.8463874
+2.8373457
+2.8389237
+2.8465262
+2.8483486
+2.8472608
+2.847874
+2.837743
+2.8311493
+2.8319502
+4.1050223
+)
+;
+    }
+    Outlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    procBoundary12to4
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary12to5
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary12to11
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary12to13
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //
