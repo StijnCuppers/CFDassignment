@@ -22,53 +22,53 @@ cdf7e925f5746741c316f5fbcf39ad0dfca90775
     {
         scalar
         {
-            Cd              0.163086445156535;
-            CdPressure      0.1574457072250802;
-            CdViscous       0.005640737931454844;
+            Cd              0.1790524806716902;
+            CdPressure      0.1743190542723443;
+            CdViscous       0.004733426399345892;
             CdInternal      0;
-            Cd(f)           -0.5058910058298232;
-            Cd(f)Pressure   -0.5086722293093454;
-            Cd(f)Viscous    0.002781223479522272;
+            Cd(f)           -0.4860264043941305;
+            Cd(f)Pressure   -0.4882660324696134;
+            Cd(f)Viscous    0.002239628075482963;
             Cd(f)Internal   0;
-            Cd(r)           0.6689774509863581;
-            Cd(r)Pressure   0.6661179365344255;
-            Cd(r)Viscous    0.002859514451932572;
+            Cd(r)           0.6650788850658207;
+            Cd(r)Pressure   0.6625850867419577;
+            Cd(r)Viscous    0.002493798323862929;
             Cd(r)Internal   0;
-            Cl              1.762302685224276;
-            ClPressure      1.762185248765661;
-            ClViscous       0.0001174364586154495;
+            Cl              1.726657934189927;
+            ClPressure      1.726276678817357;
+            ClViscous       0.0003812553725699485;
             ClInternal      0;
-            Cl(f)           0.7353080447487433;
-            Cl(f)Pressure   0.7351531724026322;
-            Cl(f)Viscous    0.0001548723461111432;
+            Cl(f)           0.7266669093413068;
+            Cl(f)Pressure   0.7264266261551331;
+            Cl(f)Viscous    0.0002402831861737645;
             Cl(f)Internal   0;
-            Cl(r)           1.026994640475533;
-            Cl(r)Pressure   1.027032076363029;
-            Cl(r)Viscous    -3.743588749569368e-05;
+            Cl(r)           0.9999910248486198;
+            Cl(r)Pressure   0.9998500526622236;
+            Cl(r)Viscous    0.0001409721863961839;
             Cl(r)Internal   0;
-            CmPitch         -0.1458432978633949;
-            CmPitchPressure -0.1459394519801983;
-            CmPitchViscous  9.615411680341843e-05;
+            CmPitch         -0.1366620577536565;
+            CmPitchPressure -0.1367117132535453;
+            CmPitchViscous  4.965549988879028e-05;
             CmPitchInternal 0;
-            CmRoll          -0.5874342284080906;
-            CmRollPressure  -0.5873950829218855;
-            CmRollViscous   -3.914548620514984e-05;
+            CmRoll          -0.5755526447299756;
+            CmRollPressure  -0.5754255596057856;
+            CmRollViscous   -0.0001270851241899829;
             CmRollInternal  0;
-            CmYaw           0.05436214838551132;
-            CmYawPressure   0.0524819024083597;
-            CmYawViscous    0.001880245977151615;
+            CmYaw           0.05968416022389682;
+            CmYawPressure   0.05810635142411486;
+            CmYawViscous    0.001577808799781964;
             CmYawInternal   0;
-            Cs              -1.13116758740579e-20;
-            CsPressure      -1.109633534885332e-20;
-            CsViscous       -2.153405252045761e-22;
+            Cs              -1.164042808901459e-20;
+            CsPressure      -1.111256204321035e-20;
+            CsViscous       -5.278660458042412e-22;
             CsInternal      0;
-            Cs(f)           0.05436214838551132;
-            Cs(f)Pressure   0.0524819024083597;
-            Cs(f)Viscous    0.001880245977151615;
+            Cs(f)           0.05968416022389682;
+            Cs(f)Pressure   0.05810635142411486;
+            Cs(f)Viscous    0.001577808799781964;
             Cs(f)Internal   0;
-            Cs(r)           -0.05436214838551132;
-            Cs(r)Pressure   -0.0524819024083597;
-            Cs(r)Viscous    -0.001880245977151615;
+            Cs(r)           -0.05968416022389682;
+            Cs(r)Pressure   -0.05810635142411486;
+            Cs(r)Viscous    -0.001577808799781964;
             Cs(r)Internal   0;
         }
     }
@@ -76,15 +76,15 @@ cdf7e925f5746741c316f5fbcf39ad0dfca90775
     {
         scalar
         {
-            average(top,p)  47426.33198557248;
-            min(top,p)      35019.51813265892;
-            max(top,p)      50084.7820960573;
-            average(bottom,p) 43429.94814690571;
-            min(bottom,p)   28210.59131560913;
-            max(bottom,p)   48220.56606197428;
-            average(p)      45453.43363483826;
-            min(p)          28210.59131560913;
-            max(p)          50084.7820960573;
+            average(top,p)  47550.29200809119;
+            min(top,p)      36395.15441313246;
+            max(top,p)      50121.48622973725;
+            average(bottom,p) 43453.76487380014;
+            min(bottom,p)   29422.95258444023;
+            max(bottom,p)   47599.0793761485;
+            average(p)      45527.95582787155;
+            min(p)          29422.95258444023;
+            max(p)          50121.48622973725;
         }
         label
         {
