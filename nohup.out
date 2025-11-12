@@ -10,3 +10,6 @@ Client connected.
 ERROR 4: `/home/ubuntu/CFDassignment/system/controlDict' not recognized as a supported file format.
 [0m[31m( 614.437s) [pvserver        ]             openpmd.py:10     ERR| Missing required Python modules/packages. Algorithms in this module may not work as expected! 
  No module named 'openpmd_api'[0m
+[0m[31m(15777.755s) [pvserver        ]vtkSocketCommunicator.c:781    ERR| vtkSocketCommunicator (0x5c1e0051ddc0): Could not receive tag. 1[0m
+[0m[31m(15777.755s) [pvserver        ]vtkTCPNetworkAccessMana:295    ERR| vtkTCPNetworkAccessManager (0x5c1e001fff20): Some error in socket processing.[0m
+Exiting...
