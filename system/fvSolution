@@ -44,6 +44,24 @@ solvers
         $U;
         relTol          0;
     }
+
+    epsilonFinal
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-6;
+        relTol          0.1;
+    }
+
+    RFinal
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-6;
+        relTol          0.1;
+    }
+
+
 }
 
 SIMPLE

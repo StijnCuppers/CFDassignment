@@ -52,13 +52,19 @@ divSchemes
     div((phi|interpolate(rho)),p) Gauss vanLeer; //Gauss upwind;
 
     div(((rho*nuEff)*dev2(T(grad(U)))))    Gauss linear;
-    div(((nuEff*dev2(T(grad(U))))) Gauss linear;
+    div((nuEff*dev2(T(grad(U))))) Gauss linear;
+    div(((rho*(thermo:mu|rho))*dev2(T(grad(U))))) Gauss linear corrected;
+    div((rho*R))      Gauss linear;
+    div(phi,epsilon)    bounded Gauss limitedLinear 1;
+
+
+
 }
 
 laplacianSchemes
 {
     default         Gauss linear corrected;
-    laplacian(nuEff, R) Gauss linear corrected; // if R has diffusive term with nuEff
+    //laplacian(nuEff, R) Gauss linear corrected; // if R has diffusive term with nuEff
 }
 
 interpolationSchemes

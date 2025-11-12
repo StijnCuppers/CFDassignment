@@ -1,0 +1,137 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       volScalarField;
+    location    "0.00021";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    Side
+    {
+        type            empty;
+    }
+    Inlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    Airfoil
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+61
+(
+0.49682049
+0.47676948
+0.49508045
+0.48535168
+0.39475911
+0.48462151
+0.30359643
+0.47897076
+0.35813314
+0.4805484
+0.48344678
+0.48355562
+0.47074455
+0.47211997
+0.3642406
+0.43592393
+0.41162047
+0.45925087
+0.40384158
+0.46286293
+0.40470027
+0.41409845
+0.44845378
+0.43889444
+0.39716435
+0.36107799
+0.46734306
+0.46010717
+0.40869735
+0.39496012
+0.30849153
+0.38198082
+0.36102919
+0.39892727
+0.38831049
+0.38667062
+0.35487051
+0.42145654
+0.43289228
+0.46406405
+0.45629046
+0.45589504
+0.45731207
+0.46161164
+0.46198351
+0.45997433
+0.45535763
+0.45730446
+0.45870801
+0.4571722
+0.45696799
+0.45842286
+0.4535321
+0.45017762
+0.45932422
+0.45231167
+0.46209155
+0.45773539
+0.44837808
+0.43715161
+0.43727276
+)
+;
+    }
+    Outlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    procBoundary31to15
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary31to21
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary31to39
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary31to47
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary31to53
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

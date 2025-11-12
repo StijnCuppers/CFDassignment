@@ -15,14 +15,20 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-numberOfSubdomains  14;
+numberOfSubdomains  56;
 
-method              hierarchical;
+method          scotch;
 
-coeffs
+// Optional: tuning for load balancing
+scotchCoeffs
 {
-    n               (7 2 1);
+    processorWeights (1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+                      1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+                      1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+                      1 1 1 1 1 1 1 1);
 }
 
+distributed     no;
+roots           ( );
 
 // ************************************************************************* //

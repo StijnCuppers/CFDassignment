@@ -18,16 +18,16 @@ FoamFile
 application     rhoPimpleFoam;
 
 startFrom       startTime;
-startTime       0.;
+startTime       0.00021;
 
 stopAt          endTime;
-endTime         0.03; //0.015; //3;
+endTime         0.05; //0.015; //3;
 
 deltaT          2e-5;
 
 writeControl    adjustable;
 
-writeintvaral    5e-4;
+writeintvaral   1e-5;
 writeInterval   $writeintvaral;
 
 writeFormat     ascii;

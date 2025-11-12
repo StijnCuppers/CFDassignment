@@ -1,0 +1,12 @@
+Waiting for client...
+Connection URL: cs://ip-172-31-44-12:11111
+[0m[31m(   0.740s) [pvserver        ]          vtkSocket.cxx:199    ERR| vtkServerSocket (0x5b9ead139320): Socket error in call to bind. Address already in use.[0m
+[0m[31m(   0.740s) [pvserver        ]vtkTCPNetworkAccessMana:453    ERR| vtkTCPNetworkAccessManager (0x5b9ead079e90): Failed to set up server socket.[0m
+Exiting...
+Waiting for client...
+Connection URL: cs://ip-172-31-44-12:11111
+Accepting connection(s): ip-172-31-44-12:11111
+Client connected.
+ERROR 4: `/home/ubuntu/CFDassignment/system/controlDict' not recognized as a supported file format.
+[0m[31m( 614.437s) [pvserver        ]             openpmd.py:10     ERR| Missing required Python modules/packages. Algorithms in this module may not work as expected! 
+ No module named 'openpmd_api'[0m
