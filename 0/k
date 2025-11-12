@@ -17,30 +17,27 @@ FoamFile
 dimensions      [0 2 -2 0 0 0 0];
 
 
-internalField   uniform 12.0048615;
+internalField   uniform 1.62e4;
 
 boundaryField
 {
-
     Inlet
     {
-        type        turbulentIntensityKineticEnergyInlet;
-        intensity   0.03;           // 3% turbulence
-        U               U;             // name of the velocity field (usually just "U")
-        value           uniform 0.01;  // dummy, overwritten internally
+        type            fixedValue;
+        value           $internalField;    // or a more physical profile if known
     }
 
     Outlet
     {
-    type            inletOutlet;
-    inletValue      uniform 1.48208e-6;    // used only when flow is into domain
+        type            inletOutlet;
+        inletValue      $internalField;
+        value           $internalField;
     }
-
 
     Airfoil
     {
-        type            kqRWallFunction; 
-        value           $internalField; 
+        type            epsilonWallFunction;
+        value           $internalField;
     }
 
     Side
@@ -48,7 +45,7 @@ boundaryField
         type            empty;
     }
 
-     #includeEtc "caseDicts/setConstraintTypes"
+    #includeEtc "caseDicts/setConstraintTypes"
 }
 
 // ************************************************************************* //

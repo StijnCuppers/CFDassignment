@@ -18,7 +18,7 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 12.004862;
+internalField   uniform 16200;
 
 boundaryField
 {
@@ -28,30 +28,29 @@ boundaryField
     }
     Inlet
     {
-        type            turbulentIntensityKineticEnergyInlet;
-        intensity       0.03;
-        value           uniform 0.01;
+        type            fixedValue;
+        value           uniform 16200;
     }
     Airfoil
     {
-        type            kqRWallFunction;
+        type            epsilonWallFunction;
         value           nonuniform List<scalar> 0();
     }
     Outlet
     {
         type            inletOutlet;
-        inletValue      uniform 1.48208e-06;
-        value           uniform 12.004862;
+        inletValue      uniform 16200;
+        value           uniform 16200;
     }
     procBoundary6to5
     {
         type            processor;
-        value           uniform 12.004862;
+        value           uniform 16200;
     }
     procBoundary6to13
     {
         type            processor;
-        value           uniform 12.004862;
+        value           uniform 16200;
     }
 }
 

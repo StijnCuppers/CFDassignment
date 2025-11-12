@@ -18,7 +18,7 @@ FoamFile
 
 dimensions      [0 1 -1 0 0 0 0];
 
-internalField   uniform (92.8055 16.3641 0);
+internalField   uniform (91.03 24.39 0);
 
 boundaryField
 {
@@ -29,8 +29,8 @@ boundaryField
     Inlet
     {
         type            freestreamVelocity;
-        freestreamValue uniform (92.8055 16.3641 0);
-        value           uniform (92.8055 16.3641 0);
+        freestreamValue uniform (91.03 24.39 0);
+        value           uniform (91.03 24.39 0);
     }
     Airfoil
     {
@@ -39,23 +39,23 @@ boundaryField
     Outlet
     {
         type            inletOutlet;
-        inletValue      uniform (92.8055 16.3641 0);
-        value           uniform (92.8055 16.3641 0);
+        inletValue      uniform (91.03 24.39 0);
+        value           uniform (91.03 24.39 0);
     }
     procBoundary13to5
     {
         type            processor;
-        value           uniform (92.8055 16.3641 0);
+        value           uniform (91.03 24.39 0);
     }
     procBoundary13to6
     {
         type            processor;
-        value           uniform (92.8055 16.3641 0);
+        value           uniform (91.03 24.39 0);
     }
     procBoundary13to12
     {
         type            processor;
-        value           uniform (92.8055 16.3641 0);
+        value           uniform (91.03 24.39 0);
     }
 }
 
