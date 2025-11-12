@@ -13,3 +13,18 @@ ERROR 4: `/home/ubuntu/CFDassignment/system/controlDict' not recognized as a sup
 [0m[31m(15777.755s) [pvserver        ]vtkSocketCommunicator.c:781    ERR| vtkSocketCommunicator (0x5c1e0051ddc0): Could not receive tag. 1[0m
 [0m[31m(15777.755s) [pvserver        ]vtkTCPNetworkAccessMana:295    ERR| vtkTCPNetworkAccessManager (0x5c1e001fff20): Some error in socket processing.[0m
 Exiting...
+Waiting for client...
+Connection URL: cs://ip-172-31-44-12:11111
+Accepting connection(s): ip-172-31-44-12:11111
+Client connected.
+ERROR 4: `/home/ubuntu/CFDassignment/system/controlDict' not recognized as a supported file format.
+[0m[31m(  48.034s) [pvserver        ]             openpmd.py:10     ERR| Missing required Python modules/packages. Algorithms in this module may not work as expected! 
+ No module named 'openpmd_api'[0m
+[0m[31m( 888.800s) [pvserver        ]  vtkOpenFOAMReader.cxx:8654   ERR| vtkOpenFOAMReaderPrivate (0x6398ebcf3550): Error reading line 100728 of /home/ubuntu/CFDassignment/0.00044/Ma: Expected a number, found a non-digit character ÿ[0m
+Waiting for client...
+Connection URL: cs://ip-172-31-44-12:11111
+Accepting connection(s): ip-172-31-44-12:11111
+Client connected.
+ERROR 4: `/home/ubuntu/CFDassignment/system/controlDict' not recognized as a supported file format.
+[0m[31m( 102.356s) [pvserver        ]             openpmd.py:10     ERR| Missing required Python modules/packages. Algorithms in this module may not work as expected! 
+ No module named 'openpmd_api'[0m

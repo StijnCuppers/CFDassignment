@@ -1,0 +1,108 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       volScalarField;
+    location    "0.00043";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    Side
+    {
+        type            empty;
+    }
+    Inlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    Airfoil
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+42
+(
+5.1849554
+5.1387894
+4.9451938
+5.0496891
+5.6648939
+5.9312038
+6.0687531
+6.5066018
+7.2362774
+8.000148
+8.3099865
+7.3802228
+6.5235305
+6.0802009
+5.653364
+4.1855852
+5.0785917
+5.2812712
+5.4395194
+7.7362999
+8.9816869
+8.6761153
+7.7063657
+8.5744361
+9.9044544
+10.103363
+10.324235
+10.81215
+9.8996648
+9.7395732
+9.8987449
+8.7976331
+6.3815894
+5.818258
+2.628984
+5.3220103
+6.3232937
+9.4910506
+9.7344497
+9.8037387
+9.9637292
+9.7656712
+)
+;
+    }
+    Outlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    procBoundary9to25
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary9to41
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary9to49
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

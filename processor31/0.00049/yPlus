@@ -1,0 +1,137 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       volScalarField;
+    location    "0.00049";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    Side
+    {
+        type            empty;
+    }
+    Inlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    Airfoil
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+61
+(
+0.51721197
+0.50156224
+0.51527726
+0.51145519
+0.40515244
+0.51064793
+0.31157469
+0.50421197
+0.37059243
+0.50604334
+0.50932068
+0.50234362
+0.49481101
+0.49644447
+0.3771976
+0.45497619
+0.42782925
+0.48142256
+0.41911746
+0.48554891
+0.42005016
+0.43035012
+0.46913641
+0.45834596
+0.41177202
+0.37368311
+0.49069757
+0.4822817
+0.42445957
+0.40910453
+0.3164065
+0.39592598
+0.37335147
+0.41335326
+0.40241826
+0.40072823
+0.36642425
+0.43862545
+0.45146642
+0.48698678
+0.47823563
+0.4778008
+0.4794169
+0.48427275
+0.48465776
+0.48238429
+0.47716849
+0.47937961
+0.48096279
+0.47922744
+0.4789549
+0.48048262
+0.47510227
+0.47139188
+0.4816296
+0.47378787
+0.48471878
+0.47966611
+0.46906998
+0.45637789
+0.45649261
+)
+;
+    }
+    Outlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    procBoundary31to15
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary31to21
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary31to39
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary31to47
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary31to53
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //
